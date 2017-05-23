@@ -61,6 +61,104 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.MaverickTV"
+       name="Maverick TV"
+       version="4.2"
+       provider-name="Maverick">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver" />
+    <import addon="script.module.simplejson" />
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Maverick TV</summary>
+    <description lang="en">Maverick TV</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.prosport" name="Pro Sport" version="0.83" provider-name="gerikss, podgod, iCanuck">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+     <import addon="script.module.requests" version="2.9.1" />
+     <import addon="script.module.urlresolver" version="3.0.24" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" provides="video" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Live HD sport streams from reddit</summary>
+    <description>Live HD sport streams from reddit</description>
+    <platform>all</platform>
+    <language>en</language>
+  </extension>
+</addon>
+
+<addon id="plugin.video.wolfpack" version="1.7" name="[B][COLOR ghostwhite]W[/COLOR][COLOR red]OLFPAC[/COLOR][COLOR ghostwhite]K[/COLOR][/B]" provider-name="Wolfpack">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="plugin.video.youtube" version="5.2.1" optional="true" />
+		<import addon="script.module.pyxbmct" version="1.1.4" />
+		<import addon="script.module.urlresolver" version="3.0.0"/>
+		<import addon="script.module.liveresolver" version="0.1.24"/>
+		<import addon="script.video.F4mProxy" version="2.2.3"/>
+		<import addon="script.module.wolfpack" version="1.0.3"/>
+		<import addon="repository.crt" version="1.0"/>
+
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Wolfpack </summary>
+		<description lang="en">Bringing you the best for 2017, this addon is jam packed with
+movies, tv shows, 3D, IPTV, Karaoke, music videos, music album
+and much much more. From the guys who brought you Specialist
+Streams, Beau's Place and more....Wolf Pack is the new
+collaboration guaranteed to mark their territory in the community.
+Enjoy!</description>
+		<platform>all</platform>
+		<forum>Wolfpack can be found on facbook at https://www.facebook.com/groups/kodiwolfpack/</forum>
+		<website>Find us on facebook.</website>
+	</extension>
+</addon>
+
+<addon id="plugin.video.wwe-on-demand" name="Wrestling On Demand" version="3.8" provider-name="@PBear90 and @jdth77">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.simplejson" version="3.3.0"/>
+    <import addon="script.module.urlresolver"  version="2.1.2"/>
+    <import addon="script.module.liveresolver" version="0.1.24"/>
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+    <import addon="plugin.video.youtube" />
+    <import addon="plugin.video.SportsDevil" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">The Home Of Wrestling On Demand</summary>
+    <description lang="en">The Offical Home Of Wrestling On Demand</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.xtream-codes" name="Xtream-Codes IPTV" version="1.0" provider-name="MikkM">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -98,6 +196,19 @@
 	</extension>
 </addon>
 
+<addon id="repository.maverickrepo" name="[COLOR orangered]MaverickTV Repo[/COLOR]" version="1.0" provider-name="Maverick TV">
+<extension point="xbmc.addon.repository" name="[COLOR orangered]MaverickTV Repo[/COLOR]">
+		<info compressed="false">http://mavericktv.esy.es/repo/plugins/addons.xml</info>
+		<checksum>http://mavericktv.esy.es/repo/plugins/addons.xml.md5</checksum>
+		<datadir zip="true">http://mavericktv.esy.es/repo/plugins/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>The MaverickTV Repository v1.0</summary>
+		<description>The MaverickTV Repository for add-on and dependencies</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
     <addon id="repository.SpinzTV" name="SpinzTV" version="0.1.1" provider-name="SpinzTV">
         <requires>
             <import addon="xbmc.addon" version="12.0.0"/>
@@ -126,5 +237,75 @@
 		<description>Official Repository Of The Supreme Builds Team</description>
 		<platform>all</platform>
 	</extension>
+</addon>
+
+<addon id="repository.whitedevil" name="White Devil Addon Repository" version="1.0.2" provider-name="White Devil Team">
+	<extension point="xbmc.addon.repository" name="White Devil Add-on Repository">
+		<dir>
+			<info compressed="false">http://brettusbuilds.com/.WHITE%20DEVIL/white.devil.repo/files/addons.xml</info>
+			<checksum>http://brettusbuilds.com/.WHITE%20DEVIL/white.devil.repo/files/addons.xml.md5</checksum>
+			<datadir zip="true">http://brettusbuilds.com/.WHITE%20DEVIL/white.devil.repo/files/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Install Add-ons from White Devil</summary>
+		<description lang="en">Download and install add-ons from White Devil</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.wolfpack" name="[B][COLOR ghostwhite]W[/COLOR][COLOR red]OLFPAC[/COLOR][COLOR ghostwhite]K[/COLOR][/B]" version="1.0" provider-name="Wolfpack">
+	<extension point="xbmc.addon.repository" name="[B][COLOR ghostwhite]W[/COLOR][COLOR red]OLFPAC[/COLOR][COLOR ghostwhite]K[/COLOR][/B]">
+		<info compressed="false">http://beaub.srve.io/wolfpackrepo/files/addons.xml</info>
+		<checksum>http://beaub.srve.io/wolfpackrepo/files/addons.xml.md5</checksum>
+		<datadir zip="true">http://beaub.srve.io/wolfpackrepo/files/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary></summary>
+		<description>This is the wolfpack repo, where you can get access to the wolfpack addon</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.module.whitedevil"
+       name="[B][COLOR white]W[/COLOR][COLOR dodgerblue]hitedevil[/COLOR][/B]"
+	   version="1.0.4"
+	   provider-name="[B][COLOR dodgerblue]Whitedevil[/COLOR][/B]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common" />
+	<import addon="script.module.requests" />
+	<import addon="script.module.urlresolver" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>all</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Dependency For whitedevil</summary>
+    <description lang="en">Dependency For whitedevil</description>
+	<disclaimer lang="en">Dependency For whitedevil</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.module.wolfpack"
+       name="[B][COLOR white]W[/COLOR][COLOR red]OLFPAC[/COLOR][COLOR white]K[/COLOR][/B]"
+	   version="1.5"
+	   provider-name="[B][COLOR red]wolfpack[/COLOR][/B]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common" />
+	<import addon="script.module.requests" />
+	<import addon="script.module.urlresolver" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>all</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Dependency For wolfpack</summary>
+    <description lang="en">Dependency For wolfpack</description>
+	<disclaimer lang="en">Dependency For wolfpack</disclaimer>
+    <platform>all</platform>
+  </extension>
 </addon>
 </addons>
