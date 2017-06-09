@@ -8,8 +8,8 @@ from libs import speedtest
 import maintool
 import socket, base64, shutil
 import freshstart
-import  installer
-import installer
+import configwizard, installer
+import installer, rejuv,rejuv_run
 from libs import addon_able
 import backup
 from libs import dom_parser
@@ -114,9 +114,12 @@ def main_menu():
     if os.path.exists(oldfresh):
         shutil.rmtree(oldfresh)
 
+    if kodi.get_setting ('wizardran') == 'false':
+        kodi.addItem("Config Wizard",'','call_wizard',artwork+'config_wizard.png',description="Automatically configure Kodi with the best addons and goodies in seconds!")
     kodi.addDir("Addon Installer",'','call_installer',artwork+'addon_installer.png',description="It’s like an App Store for Kodi addons!")
     kodi.addDir("Maintenance Tools",'','call_maintool',artwork+'maintool.png',description="Keep your Kodi setup running at optimum performance!")
     #kodi.addDir("Kodi Librtmp Files",'','get_libs',artwork+'librtmp_files.png')
+    kodi.addItem("Rejuvenate Kodi",'','call_rejuv',artwork+'rejuvinate.png',description="Wipe and reconfigure Kodi with the latest Config Wizard setup!")
     kodi.addDir("Factory Restore",'','call_restore',artwork+'factory_restore.png',description="Start off fresh, wipe your Kodi setup clean!")
     kodi.addItem("Log Uploader",'','log_upload',artwork+'log_uploader.png',description="Easily upload your error logs for troubleshooting!")
     kodi.addDir("Network Speed Test",'','runspeedtest',artwork+'speed_test.png',description="How fast is your internet?")
@@ -626,7 +629,8 @@ elif mode=='disable_notify':
 
 
 #######WIZARD#########################
-
+elif mode=='call_wizard':
+        configwizard.HELPCATEGORIES()
 
 elif mode=="wizardstatus":
         print""+url
@@ -689,6 +693,12 @@ elif mode=='BrowseUrl':
     xbmc.executebuiltin("XBMC.System.Exec(%s)" % url)
 ###################################
 
+###REJUVINATE###########
+elif mode=='call_rejuv':
+        rejuv.startup_rejuv()
+
+elif mode=='juvwizard':
+    rejuv_run.JUVWIZARD()
 
 elif mode=='enableall':
     addon_able.setall_enable()
