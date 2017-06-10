@@ -46,7 +46,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.program.supremebuildswizard" name="Supreme Builds Wizard" version="3.0.3" provider-name="KodiSkills">
+<addon id="plugin.program.supremebuildswizard" name="Supreme Builds Wizard" version="3.0.4" provider-name="KodiSkills">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -193,19 +193,6 @@ Enjoy!</description>
   </extension>
 </addon>
 
-<addon id="repository.bradleyrepo" name="Bradley Repo" version="1.0" provider-name="Bradley">
-    <extension point="xbmc.addon.repository" name="Bradley Repository">
-        <info compressed="false">https://raw.githubusercontent.com/bradl79/bradleyrepo/master/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/bradl79/bradleyrepo/master/addons.xml.md5</checksum>
-        <datadir zip="true">https://github.com/bradl79/bradleyrepo/raw/master/zips</datadir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary></summary>
-        <description></description>
-        <platform>all</platform>
-    </extension>
-</addon>
-
 <addon id="repository.exodus" version="1.0.1" name="Exodus repository" provider-name="Exodus">
 	<extension point="xbmc.addon.repository" name="Exodus repository">
 		<dir>
@@ -267,21 +254,6 @@ Enjoy!</description>
 	</extension>
 </addon>
 
-<addon id="repository.whitedevil" name="White Devil Addon Repository" version="1.0.2" provider-name="White Devil Team">
-	<extension point="xbmc.addon.repository" name="White Devil Add-on Repository">
-		<dir>
-			<info compressed="false">http://brettusbuilds.com/.WHITE%20DEVIL/white.devil.repo/files/addons.xml</info>
-			<checksum>http://brettusbuilds.com/.WHITE%20DEVIL/white.devil.repo/files/addons.xml.md5</checksum>
-			<datadir zip="true">http://brettusbuilds.com/.WHITE%20DEVIL/white.devil.repo/files/</datadir>
-		</dir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Install Add-ons from White Devil</summary>
-		<description lang="en">Download and install add-ons from White Devil</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
 <addon id="repository.wolfpack" name="[B][COLOR ghostwhite]W[/COLOR][COLOR red]OLFPAC[/COLOR][COLOR ghostwhite]K[/COLOR][/B]" version="1.1" provider-name="Wolfpack">
 	<extension point="xbmc.addon.repository" name="[B][COLOR ghostwhite]W[/COLOR][COLOR red]OLFPAC[/COLOR][COLOR ghostwhite]K[/COLOR][/B]">
 		<info compressed="false">http://midian.srve.io/wolfpackrepo/files/addons.xml</info>
@@ -293,27 +265,6 @@ Enjoy!</description>
 		<description>This is the wolfpack repo, where you can get access to the wolfpack addon</description>
 		<platform>all</platform>
 	</extension>
-</addon>
-
-<addon id="script.module.whitedevil"
-       name="[B][COLOR white]W[/COLOR][COLOR dodgerblue]hitedevil[/COLOR][/B]"
-	   version="1.0.4"
-	   provider-name="[B][COLOR dodgerblue]Whitedevil[/COLOR][/B]">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.addon.common" />
-	<import addon="script.module.requests" />
-	<import addon="script.module.urlresolver" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>all</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Dependency For whitedevil</summary>
-    <description lang="en">Dependency For whitedevil</description>
-	<disclaimer lang="en">Dependency For whitedevil</disclaimer>
-    <platform>all</platform>
-  </extension>
 </addon>
 
 <addon id="script.module.wolfpack"
